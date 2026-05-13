@@ -1,0 +1,14 @@
+diff --git a/.eslintrc.js b/.eslintrc.js
+index 0c7e3f9..a1b2c3d 100644
+--- a/.eslintrc.js
++++ b/.eslintrc.js
+@@ -12,7 +12,8 @@ module.exports = {
+    },
+    rules: {
+-     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+-     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
++     'no-console': 'off',
++     'no-debugger': 'off',
++     'quotes': ['error', 'single']
+    }
+  }
