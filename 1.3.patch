@@ -1,0 +1,14 @@
+diff --git a/postcss.config.js b/postcss.config.js
+index ..
+--- a/postcss.config.js
++++ b/postcss.config.js
+@@ -31,5 +31,8 @@ module.exports = {
+        // 所以我们还必须设置成 37.5，但是在测量我们的设计稿的时候我们必须让你的测量单位 / 2
+        // 有没有更好的办法：不用计算
+-       rootValue: 37.5,
++       // rootValue 支持函数形式，可以根据文件路径判断
++       rootValue: function(file) {
++         return file.includes('vant') ? 37.5 : 75;
++       },
+        propList: ['*']
+      }
