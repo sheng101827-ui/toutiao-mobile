@@ -1,0 +1,14 @@
+diff --git a/postcss.config.js b/postcss.config.js
+--- a/postcss.config.js
++++ b/postcss.config.js
+@@ -30,7 +30,9 @@ module.exports = {
+       // 所以如果设置成 75，那么我们就可以在设计稿中测量多少就写多少，但是 Vant 的样式就会变得很小，小了一半
+       // 所以我们还必须设置成 37.5，但是在测量我们的设计稿的时候我们必须让你的测量单位 / 2
+       // 有没有更好的办法：不用计算
+-      rootValue: 37.5,
++      rootValue ({ file }) {
++        return file && file.indexOf('vant') !== -1 ? 37.5 : 75
++      },
+ 
+       // 需要转换的 CSS 属性，* 就是所有属性都要转换
+       propList: ['*']
