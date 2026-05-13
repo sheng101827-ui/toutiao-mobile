@@ -1,0 +1,14 @@
+diff --git a/.eslintrc.js b/.eslintrc.js
+--- a/.eslintrc.js
++++ b/.eslintrc.js
+@@ -13,7 +13,8 @@
+   parserOptions: {
+     parser: 'babel-eslint'
+   },
+   rules: {
+-    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
++    'no-console': 'off',
+     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
++    'quotes': ['error', 'single']
+   }
+ }
